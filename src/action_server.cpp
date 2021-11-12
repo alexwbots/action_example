@@ -41,8 +41,6 @@ public:
 
   void executeCB(const action_example::TimerGoalConstPtr &goal)
   {
-    // helper variables
-    //ros::Rate rate(5);
     ros::Duration goal_time = goal->time_to_wait;
     ROS_INFO("%s is processing the goal %f", action_name_.c_str(), goal_time.toSec());
 
@@ -53,16 +51,16 @@ public:
     result_.time_elapsed = ros::Duration(end_time - start_time);
     result_.updates_sent = 0;
     ROS_INFO("%s: Succeeded", action_name_.c_str());
+    
     // set the action state to succeeded
     as_.setSucceeded(result_);
-    //rate.sleep();
   }
 };
 
 
 int main(int argc, char** argv)
 {
-  ros::init(argc, argv, "action_server");
+  ros::init(argc, argv, "timer");
   ROS_INFO("Starting Demo Action Server");
   TimerAction timer(ros::this_node::getName());
   ros::spin();

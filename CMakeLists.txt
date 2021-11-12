@@ -213,3 +213,7 @@ include_directories(
 add_executable(action_server src/action_server.cpp)
 add_dependencies(action_server ${catkin_EXPORTED_TARGETS} ${${PROJECT_NAME}_EXPORTED_TARGETS})
 target_link_libraries(action_server ${catkin_LIBRARIES})
+
+add_executable(action_client src/action_client.cpp)
+add_dependencies(action_client ${catkin_EXPORTED_TARGETS} ${${PROJECT_NAME}_EXPORTED_TARGETS})
+target_link_libraries(action_client ${catkin_LIBRARIES})

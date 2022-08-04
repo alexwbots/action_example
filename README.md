@@ -4,6 +4,7 @@ This package is for example of ros nodes action server and client in python and 
 Instructions to run the C++ nodes, python nodes don't need compilation.
 
 ```
+$ cd
 $ cd catkin_ws
 $ catkin_make --only-pkg-with-deps subpub_example
 ```

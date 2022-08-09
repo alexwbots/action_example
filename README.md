@@ -6,7 +6,7 @@ Instructions to run the C++ nodes, python nodes don't need compilation.
 ```
 $ cd
 $ cd catkin_ws
-$ catkin_make --only-pkg-with-deps subpub_example
+$ catkin_make --only-pkg-with-deps action_example
 ```
 Once the package is build, you can run the nodes written in C++.
 
